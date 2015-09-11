@@ -16,6 +16,7 @@ print "________________________________________________________"
 for line in savedTokensContent:
     lineContent = line.split('-')
     print "Name: " + lineContent[0] + ' Key: ' + lineContent[1]
+print "Insert Token or Key"
 token = raw_input('- ')
 for line in savedTokensContent:
     if token.lower() in lineContent[1]:
