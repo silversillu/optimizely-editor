@@ -15,6 +15,7 @@ To run the program you need to:
 3. Install Optimizely using PIP
   - $ pip install https://github.com/optimizely/optimizely-client-python/archive/master.zip
 
+How to use
 -------------------------------
 How to use the Python Optimizely editor for local editing using your favorite tools
 
