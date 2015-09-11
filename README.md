@@ -26,7 +26,7 @@ How to use the Python Optimizely editor for local editing
       - Experiment.js
       - Variation folders
           - Variation.js
-  (also a backup file for each file)
+  - (also a backup file for each file)
 4. After the program said "Your files are ready to edit" you can open and edit the file, after you save the file it's going to be uploaded to Optimizely automatically
 5. When done with the editing: close the program.
 
