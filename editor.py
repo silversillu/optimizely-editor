@@ -7,10 +7,10 @@ from time import gmtime, strftime # for backup file names
 print 'Please insert your TOKEN. (Could be found on optimizely.com/tokens)'
 # Saved tokens - feel free to add more
 print 'Saved tokens:'
-print '|for Diamondcandles type DC |'
+print '|No saved tokens - edit code to add them |'
 token = raw_input('- ')
-if token.lower() == "dc":
-    token = "2da375afde0f348bf1e45fc4c0d97385:911add2d"
+if token.lower() == "":
+    token = ""
 client = optimizely.Client(token)
 
 # POSSIBLE ACTIONS:

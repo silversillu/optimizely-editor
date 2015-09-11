@@ -4,7 +4,7 @@ Optimizely Editor - Python
 Documentation
 -------------
 
-Python Optimizely Editor for local editing.
+Optimizely Editor for local editing.
 
 To run the program you need to:
 
@@ -16,9 +16,10 @@ To run the program you need to:
   - $ pip install https://github.com/optimizely/optimizely-client-python/archive/master.zip
 
 -------------------------------
-How to use the Python Optimizely editor for local editing
+How to use the Python Optimizely editor for local editing using your favorite tools
 
-1. You need to know the API Token for project you are editing - optimizely.com/tokens
+1. You need to know the API Token for the project you want to edit - http://optimizely.com/tokens
+  - You can save them, so that you don't have to insert them every time
 2. You need to know the ID of the experiment you are going to edit
 3. After inserting API Token and experiment ID the program indexes and creates the files and folders needed:
   - Experiment folder
