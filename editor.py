@@ -2,9 +2,10 @@ import optimizely # for Optimizely API acess
 import os # To read and write files
 import sys # To read and write files
 import os.path, time # For editing files
-from time import gmtime, strftime
+from time import gmtime, strftime # for backup file names
 
 print 'Please insert your TOKEN. (Could be found on optimizely.com/tokens)'
+# Saved tokens - feel free to add more
 print 'Saved tokens:'
 print '|for Diamondcandles type DC |'
 token = raw_input('- ')
