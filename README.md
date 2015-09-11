@@ -13,7 +13,7 @@ To run the program you need to:
 2. Install PIP
   - How to do it on Windows: http://arunrocks.com/guide-to-install-python-or-pip-on-windows/
 3. Install Optimizely using PIP
-  -$ pip install https://github.com/optimizely/optimizely-client-python/archive/master.zip
+  - $ pip install https://github.com/optimizely/optimizely-client-python/archive/master.zip
 
 -------------------------------
 How to use the Python Optimizely editor for local editing
