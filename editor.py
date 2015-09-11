@@ -6,9 +6,21 @@ from time import gmtime, strftime # for backup file names
 
 print 'Please insert your TOKEN. (Could be found on optimizely.com/tokens)'
 # Saved tokens - feel free to add more
-print 'Saved tokens:'
-print '|No saved tokens - edit code to add them |'
+
+savedTokens = open('saved tokens.txt', 'r')
+savedTokensContent = savedTokens.readlines()
+savedTokens.close()
+print "SAVED TOKENS:"
+print 'NAME and  KEY --> to choose, type "KEY" and press enter'
+print "________________________________________________________"
+for line in savedTokensContent:
+    lineContent = line.split('-')
+    print "Name: " + lineContent[0] + ' Key: ' + lineContent[1]
 token = raw_input('- ')
+for line in savedTokensContent:
+    if token.lower() in lineContent[1]:
+        token = lineContent[2].replace('\n', '')
+        
 if token.lower() == "":
     token = ""
 client = optimizely.Client(token)
@@ -16,6 +28,7 @@ client = optimizely.Client(token)
 # POSSIBLE ACTIONS:
 # Get existing experiment
 def getExperiment():
+    print "______________________"
     print "Insert experiment ID: "
     experimentID = int(raw_input('- '))
     experiment = client.Experiments.get(experimentID)
