@@ -104,18 +104,3 @@ def getExperiment():
 getExperiment()
 
 # __________________ END "GET EXPERIMENT FUNCTION" ____________________
-
-# New experiment
-# New variation
-
-# Choose next action function
-"""
-def nextAction():
-    print "CHOOSE YOUR ACTION - type letter and press enter to choose \n - E - index and edit experiment"
-    nextActionName = raw_input('- ')
-    if nextActionName == "E" or nextActionName == "e":
-        getExperiment()
-    nextAction()
-
-nextAction()
-"""
