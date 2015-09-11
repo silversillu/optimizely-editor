@@ -9,8 +9,10 @@ Python Optimizely Editor for local editing.
 To run the program you need to:
 
 1. Have Python on your device http://www.python.org/download/ --> when installing make sure to check "Add Python to your path"
-2. Install PIP. How to do it on Windows: http://arunrocks.com/guide-to-install-python-or-pip-on-windows/
-3. Install Optimizely using PIP - pip install https://github.com/optimizely/optimizely-client-python/archive/master.zip
+2. Install PIP
+  - How to do it on Windows: http://arunrocks.com/guide-to-install-python-or-pip-on-windows/
+3. Install Optimizely using PIP
+  $ pip install https://github.com/optimizely/optimizely-client-python/archive/master.zip
 
 -------------------------------
 How to use the Python Optimizely editor for local editing
