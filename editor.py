@@ -2,6 +2,7 @@ import optimizely # for Optimizely API acess
 import os # To read and write files
 import sys # To read and write files
 import os.path, time # For editing files
+from time import gmtime, strftime
 
 print 'Please insert your TOKEN. (Could be found on optimizely.com/tokens)'
 print 'Saved tokens:'
@@ -23,6 +24,9 @@ def getExperiment():
     # if no such folder exists on computer - create it
     if not os.path.exists(experimentName):
         os.makedirs(experimentName)
+    # Folder for backups
+    if not os.path.exists(experimentName + "/backups"):
+        os.makedirs(experimentName + "/backups")
     # If file doesn't exist, create it and if exists update its content.
     files = [] # array for files that could be edited
     experimentJSfile = open(experimentName + '/experiment.js', 'w')
@@ -34,10 +38,10 @@ def getExperiment():
     experimentCSSfile.close()
     files.append(experimentName + '/experiment.css')
     # Create backup files which wont be upladed to Optimizely
-    experimentJSfile = open(experimentName + '/experiment(backup).js', 'w')
+    experimentJSfile = open(experimentName + '/backups/experiment-' + strftime('%Y-%m-%d_%H-%M-%S', gmtime()) + '.js', 'w')
     experimentJSfile.write(experimentJS)
     experimentJSfile.close()
-    experimentCSSfile = open(experimentName + '/experiment(backup).css', 'w')
+    experimentCSSfile = open(experimentName + '/backups/experiment-' + strftime('%Y-%m-%d_%H-%M-%S', gmtime()) + '.css', 'w')
     experimentCSSfile.write(experimentCSS)
     experimentCSSfile.close()
     # Get the variations
@@ -58,7 +62,7 @@ def getExperiment():
         variationJSfile.close()
         files.append(experimentName + '/' + variationName + '/variation.js') # For editing files
         # Create backup files which wont be upladed to Optimizely
-        variationJSfile = open(experimentName + '/' + variationName + '/variation(backup).js', 'w')
+        variationJSfile = open(experimentName + '/backups/variation-' + strftime('%Y-%m-%d_%H-%M-%S', gmtime()) + '.js', 'w')
         variationJSfile.write(variationJS)
         variationJSfile.close()
         print "Indexed variation : ", variationName
