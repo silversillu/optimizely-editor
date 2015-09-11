@@ -21,6 +21,7 @@ def getExperiment():
     experimentJS = experiment.__dict__['custom_js']
     experimentCSS = experiment.__dict__['custom_css']
     experimentName = str(experiment.__dict__['description'])
+    experimentName = experimentName.replace('/', '-') # To not mess up the path
     # if no such folder exists on computer - create it
     if not os.path.exists(experimentName):
         os.makedirs(experimentName)
@@ -53,6 +54,7 @@ def getExperiment():
         # Create folder with variation.js for every variation
         variation = client.Variations.get(variationID)
         variationName = str(variation.__dict__['description'])
+        variationName = variationName.replace('/', '-') # To not mess up the path
         path = experimentName + "/"
         if not os.path.exists(experimentName + "/" + variationName):
             os.makedirs(experimentName + "/" + variationName)
