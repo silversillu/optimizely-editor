@@ -37,4 +37,5 @@ How to add new saved token
 1. Open "saved tokens.txt"
 2. Add new line following the example given
   - tokenAccountName-tokenKey-token
+  - no spaces between name, key and token!
 
