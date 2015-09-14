@@ -100,7 +100,7 @@ def getExperiment():
                     thisFileContent.close()
                     experiment.save()
                     print "File {} has been modified".format(f)
-                elif "experiment.js" in f:
+                elif "experiment.css" in f:
                     thisFileContent = open(f , 'r')
                     experiment.custom_css = thisFileContent.read()
                     thisFileContent.close()
